@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    style.
+      table, th, td {
+      border: 1px solid black;
+      }
+  body
+    h3(style='text-align:center') Student Data
+    table(style='width:100%')
+      tr
+        th Firstname
+        th Lastname
+      each user in data
+        tr
+         td #{user.name}
+         td #{user.email}

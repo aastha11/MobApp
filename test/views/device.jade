@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    style.
+      table, th, td {
+      border: 1px solid black;
+      }
+  body
+    h3(style='text-align:center') Student Data
+    table(style='width:100%')
+      tr
+        th Device Name
+        th Device Type
+        th UUID
+      each user in data
+        tr
+         td #{user.name}
+         td #{user.type}
+         td #{user.uuid}
+
+h3(style='text-align:center')
+      | Create Student Data
+      form(action='/create', method='POST', style='text-align: center;')
+        .form-group
+          label(for='fname') Device Name
+          input.form-contrl(type='text', placeholder='name', name='name')
+        .form-group
+          label(for='fname') Device Type
+          input.form-contrl(type='text', placeholder='name', name='type')
+        button(type='Submit') Submit
+
+
+h3(style='text-align:center')
+      | Update Student Data
+      form(action='/update', method='POST', style='text-align: center;')
+        .form-group
+          label(for='fname') Device Name
+          input.form-contrl(type='text', placeholder='name', name='name')
+        .form-group
+          label(for='fname') Device Type
+          input.form-contrl(type='text', placeholder='name', name='type')
+        button(type='Submit') Submit
+
+
+h3(style='text-align:center')
+      | Delete Student Data
+      form(action='/del', method='POST', style='text-align: center;')
+        .form-group
+          label(for='fname') Device Name
+          input.form-contrl(type='text', placeholder='name', name='name')
+        .form-group
+          label(for='fname') Device Type
+          input.form-contrl(type='text', placeholder='name', name='type')
+        button(type='Submit') Submit
